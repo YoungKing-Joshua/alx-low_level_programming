@@ -12,12 +12,12 @@
 int main(void)
 
 {
-        char apha;
+	char apha;
 
-        for (apha = 'z'; apha >= 'a'; apha--)
-        {
-                putchar(apha);
-        }
-        putchar('\n');
-        return (0);
+	for (apha = 'z'; apha >= 'a'; apha--)
+	{
+		putchar(apha);
+	}
+	putchar('\n');
+	return (0);
 }
