@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * main -  printing _putchar
+ * main - print putchar , followed by a new line
  *
- * Return - Always 0 (Success)
- *
+ * Return: Always (Success)
  */
 
 
