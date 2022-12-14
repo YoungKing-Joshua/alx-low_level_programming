@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - main block
+ * main - prints sum of all multiple
  *
- * Return: 0.
+ * Return: Always 0(Success)
  */
 int main(void)
 
 {
-	int c = 0;
-	int sum = 0;
+	int n = 0;
+	int m = 0;
 
-	while (c < 1024)
+	while (n < 1024)
 	{
-		if (c % 3 == 0 || c % 5 == 0)
+		if (n % 3 == 0 || n % 5 == 0)
 		{
-			sum += c;
+			m += n;
 		}
-		c++;
+		n++;
 	}
-	printf("%i\n", sum);
+	printf("%i\n", m);
 	return (0);
 }
