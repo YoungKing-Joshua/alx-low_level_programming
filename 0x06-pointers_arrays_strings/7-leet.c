@@ -28,3 +28,6 @@ char *leet(char *s)
 		}
 		j++;
 	}
+
+	return (s);
+}
