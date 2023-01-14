@@ -8,7 +8,7 @@
  * @s2: second str
  * @n: bytes of s2 to concatenate
  *
- * Return: pointer to newly allocated s1, followed by 
+ * Return: pointer to newly allocated s1, followed by
  * the first n bytes of s2 NULL if function fails
  */
 

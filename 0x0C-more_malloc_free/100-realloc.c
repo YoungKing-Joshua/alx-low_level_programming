@@ -14,25 +14,25 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *clone, *temp_ptr;
+	char *new_size, *temp_ptr;
 	unsigned int n;
 
-	if (clone == old_size)
+	if (new_size == old_size)
 		return (ptr);
 	if (ptr == NULL)
 	{
-		new_ptr = malloc(clone);
+		new_ptr = malloc(new_size);
 		if (new_ptr == NULL)
 			return (NULL);
 		free(ptr);
 		return (new_ptr);
 	}
-	if (clone == 0 && ptr != NULL)
+	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	new_ptr = malloc(clone);
+	new_ptr = malloc(new_size);
 	if (new_ptr == NULL)
 		return (NULL);
 	temp_ptr = ptr;
