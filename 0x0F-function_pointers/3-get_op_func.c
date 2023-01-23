@@ -3,7 +3,7 @@
 
 /**
  * get_op_func - get ops function pointer of type char array
- *that accepts two inputs of int data type
+ * that accepts two inputs of int data type
  *
  * @s: a character pointer pointing to a symbol from the program argument
  *
