@@ -5,7 +5,7 @@
  *
  * @head: pointer to the first node in the linked list
  * @index: index of the node to return
- * 
+ *
  * Return: pointer to the node we're looking for, or NULL
  */
 
