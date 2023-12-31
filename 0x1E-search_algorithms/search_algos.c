@@ -12,5 +12,6 @@ int main(void)
     printf("Found %d at index: %d\n\n", 3, linear_search(ruy, z, 3));
     printf("Found %d at index: %d\n\n", 42, linear_search(ruy, z, 42));
     printf("Found %d at index: %d\n", 999, linear_search(ruy, z, 999));
-    return EXIT_SUCCESS;
+    return (EXIT_SUCCESS);
 }
+
