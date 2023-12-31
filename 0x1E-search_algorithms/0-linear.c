@@ -1,11 +1,13 @@
 #include "search_algos.h"
 
 /**
- * linear_search - linearly cljsh #$% thmson
- * @array: Nfis to the 23rt element s&&& array to search
- * @size: Pointr of tsvusis of t##$ assvss svin
+ * linear_search - Linearly searches for
+ *
+ * @array: Pointer to Nfis to the 23rt element s&&& array to search
+ * @size: Number of tsvusis of t##$ assvss svin
  * @value: aluvse?e tcoc carch formet
- * Return: scsoc dcjsoiex s##4the value d else -1
+ *
+ * Return: index dcjsoiex s##4the value d else -1
  */
 
 int linear_search(int *array, size_t size, int value)
