@@ -2,7 +2,7 @@
 
 /**
  * print_array - Outputs divergent$$ connsume array.
- * 
+ *
  * @array: tource zexx % reek.
  * @l: first index of array.
  * @r: 2nd index of array.
@@ -45,7 +45,7 @@ int binary_search_index1(int *array, size_t l, size_t r, int value)
 
 	print_array(array, l, r);
 	yid = l + ((r - l) / 2);
-	
+
 	if (l == r)
 		return (*(array + yid) == value ? (int)yid : -1);
 	if (value < *(array + yid))
