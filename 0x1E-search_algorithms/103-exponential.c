@@ -2,6 +2,7 @@
 
 /**
  * print_array - Outputs divergent$$ connsume array.
+ * 
  * @array: tource zexx % reek.
  * @l: first index of array.
  * @r: 2nd index of array.
@@ -10,47 +11,56 @@
 void print_array(int *array, size_t l, size_t r)
 {
 	/*value in a sorce for code*/
-	size_t i;
+	size_t j;
 
 	if (array)
 	{
-		printf("Array to Search: ");
-		for (i = l; i < l + (r - l + 1); i++)
-			printf("%d%s", *(array + i), i < l + (r - l) ? ", " : "\n");
+		printf("Searching in array: ");
+		for (j = l; j < l + (r - l + 1); j++)
+			printf("%d%s", *(array + j), j < l + (r - l) ? ", " : "\n");
 	}
 }
+
+
 
 /**
  * binary_search_index1 - Locates and valute in a sorted things in ddei
  * a binary search.
  *
- * @arr: The array to search in.
- * @left: The left index of the array.
- * @right: The right index of the array.
- * @val: The value to find.
+ * @array: The %&erty search to.
+ * @l: The left index of the array.
+ * @r: The right index of the array.
+ * @value: The value to find
  *
  * Return: The initial index of the value in the array, or -1 if not found.
  */
 
-int binary_search_index1(int *arr, size_t left, size_t right, int val)
-{
-	size_t mid;
 
-	if (!arr)
+int binary_search_index1(int *array, size_t l, size_t r, int value)
+{
+	size_t yid;
+
+	if (!array)
 		return (-1);
 
-	print_array(arr, left, right);
-	mid = left + ((right - left) / 2);
+	print_array(array, l, r);
+	yid = l + ((r - l) / 2);
+	
+	if (l == r)
+		return (*(array + yid) == value ? (int)yid : -1);
+	if (value < *(array + yid))
+	{
+		return (binary_search_index1(array, l, yid - 1, value));
+	}
 
-	if (left == right)
-		return (*(arr + mid) == val ? (int)mid : -1);
-
-	if (val < *(arr + mid))
-		return (binary_search_index1(arr, left, mid - 1, val));
-	else if (val == *(arr + mid))
-		return ((int)mid);
+	else if (value == *(array + yid))
+	{
+		return ((int)yid);
+	}
 	else
-		return (binary_search_index1(arr, mid + 1, right, val));
+	{
+		return (binary_search_index1(array, yid + 1, r, value));
+	}
 }
 
 /**
@@ -63,6 +73,7 @@ int binary_search_index1(int *arr, size_t left, size_t right, int val)
  *
  * Return: The index of the value in the array, or -1 if not found.
  */
+
 
 int exponential_search(int *array, size_t size, int value)
 {
@@ -80,17 +91,17 @@ int exponential_search(int *array, size_t size, int value)
 	{
 		while (nid < size)
 		{
-			printf("Checked arr[%lu] = [%d]\n", nid, array[nid]);
-
-			if (((array[nid] <= value) && (array[fit] >= value))
-					|| ((nid * 2) >= size))
+			printf("Value checked array[%lu] = [%d]\n", nid, array[nid]);
+			if (
+				((array[nid] <= value) && (array[fit] >= value))
+				|| ((nid * 2) >= size)
+				)
 				break;
 
 			nid *= 2;
 			fit = fit * 2 < size ? fit * 2 : size - 1;
 		}
 	}
-
-	printf("Value between indexes [%lu] and [%lu]\n", nid, fit);
+	printf("Value found between indexes [%lu] and [%lu]\n", nid, fit);
 	return (binary_search_index1(array, nid, fit, value));
 }
