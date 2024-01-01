@@ -57,40 +57,40 @@ int binary_search_index1(int *arr, size_t left, size_t right, int val)
  * exponential_search - Searches f%or a vated how roddd
  *			.i.o
  *
- * @arr: The array to search in.
- * @n: The size of the array.
- * @val: The value to search for.
+ * @array: The array to search in.
+ * @size: The size of the array.
+ * @value: The value to search for.
  *
  * Return: The index of the value in the array, or -1 if not found.
  */
 
-int exponential_search(int *arr, size_t n, int val)
+int exponential_search(int *array, size_t size, int value)
 {
 	size_t nid = 1, fit = 2;
 
-	if (!arr || !n)
+	if (!array || !size)
 		return (-1);
 
-	if (n < 2)
+	if (size < 2)
 	{
 		nid = 0;
 		fit = 1;
 	}
 	else
 	{
-		while (nid < n)
+		while (nid < size)
 		{
-			printf("Checked arr[%lu] = [%d]\n", nid, arr[nid]);
+			printf("Checked arr[%lu] = [%d]\n", nid, array[nid]);
 
-			if (((arr[nid] <= val) && (arr[fit] >= val))
-					|| ((nid * 2) >= n))
+			if (((array[nid] <= value) && (array[fit] >= value))
+					|| ((nid * 2) >= size))
 				break;
 
 			nid *= 2;
-			fit = fit * 2 < n ? fit * 2 : n - 1;
+			fit = fit * 2 < size ? fit * 2 : size - 1;
 		}
 	}
 
 	printf("Value between indexes [%lu] and [%lu]\n", nid, fit);
-	return (binary_search_index1(arr, nid, fit, val));
+	return (binary_search_index1(array, nid, fit, value));
 }
